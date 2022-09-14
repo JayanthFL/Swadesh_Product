@@ -1,4 +1,4 @@
-export const AddProductList = [
+export const ProductList = [
     {
         id: 1,
         name: 'product-1',
