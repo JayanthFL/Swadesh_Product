@@ -1,8 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList, Image } from 'react-native';
 import { ProductList } from '../constants/Constants';
+import { firebase } from '@react-native-firebase/database';
 
 const renderProduct = ({ item }) => {
+	const reference = firebase
+		.app()
+		.database('https://swadeshproject-default-rtdb.asia-southeast1.firebasedatabase.app')
+		.ref('/');
+console.log('reference',reference)
 	return (
 		<View style={styles.productCard}>
 			<Image source={{ uri: item.image }} style={styles.productImage} />
@@ -38,7 +44,7 @@ export default function Home({ navigation }) {
 				renderItem={renderProduct}
 				keyExtractor={(item) => item.id}
 			/>
-			<TouchableOpacity style={styles.addBtn} onPress={() =>  navigation.navigate('Add Product')}>
+			<TouchableOpacity style={styles.addBtn} onPress={() => navigation.navigate('Add Product')}>
 				<Text style={styles.addBtnLabel}>{'\u2795'} Add Product</Text>
 			</TouchableOpacity>
 		</View>
@@ -60,13 +66,13 @@ const styles = StyleSheet.create({
 	cardBottom: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-        paddingTop: 10
+		paddingTop: 10
 	},
 	productName: {
 		color: '#595959',
 		fontSize: 17,
 		fontWeight: '700',
-        paddingBottom: 5
+		paddingBottom: 5
 	},
 	priceConrtainer: {
 		flexDirection: 'row'
@@ -112,11 +118,11 @@ const styles = StyleSheet.create({
 	},
 	addBtnLabel: {
 		borderRadius: 5,
-		borderColor: "#595959",
+		borderColor: '#595959',
 		borderWidth: 1,
 		borderStyle: 'dashed',
 		textAlign: 'center',
 		padding: 15,
-        color: "#595959"
+		color: '#595959'
 	}
 });

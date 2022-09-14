@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "385648450513",
+    "firebase_url": "https://swadeshproject-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "swadeshproject",
+    "storage_bucket": "swadeshproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385648450513:android:52c1aebc3cb7db087e5ef0",
+        "android_client_info": {
+          "package_name": "com.swadeshproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385648450513-mu730e0lt9p7kphvfe15v1hoh800ch81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEvhaH2VJ9W0fTQ3odLIexgRAQPmpguBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385648450513-mu730e0lt9p7kphvfe15v1hoh800ch81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
